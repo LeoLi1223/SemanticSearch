@@ -1,8 +1,8 @@
 const {generateEmbedding, cosineSimilarity, semanticSearch} = require('./routes/SemanticSearch')
 
-const text1 = "It's raining outside."
-const text2 = "The weather is rainy."
-const text3 = "I gonna go shopping."
+// const text1 = "It's raining outside.";
+// const text2 = "The weather is rainy.";
+// const text3 = "I gonna go shopping.";
 
 // generateEmbedding(text2)
 //     .then(embedding1 => {
@@ -26,6 +26,7 @@ let targetList = [
     "I need to get some food from the supermarket"
     ];
 
-semanticSearch(text3, targetList, 8)
+let serachTerm = "It's raining outside.";
+semanticSearch(serachTerm, targetList, 8)
     .then(res => console.log(res))
     .catch(err => console.log(err));
